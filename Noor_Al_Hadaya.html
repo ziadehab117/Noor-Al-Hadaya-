@@ -1,0 +1,1778 @@
+<html lang="ar" dir="rtl"><head><script>(function(firebaseConfig, initialAuthToken, appId) {
+        window.__firebase_config = firebaseConfig;
+        window.__initial_auth_token = initialAuthToken;
+        window.__app_id = appId;
+            })("\n{\n  \"apiKey\": \"AIzaSyCqyCcs2R2e7AegGjvFAwG98wlamtbHvZY\",\n  \"authDomain\": \"bard-frontend.firebaseapp.com\",\n  \"projectId\": \"bard-frontend\",\n  \"storageBucket\": \"bard-frontend.firebasestorage.app\",\n  \"messagingSenderId\": \"175205271074\",\n  \"appId\": \"1:175205271074:web:2b7bd4d34d33bf38e6ec7b\"\n}\n","eyJhbGciOiJSUzI1NiIsImtpZCI6Ijg4NWQ3NDljYzY2NDljMDMxOWY1YmJlYWYwMWU4ZmVjZDIyZjk1YzQiLCJ0eXAiOiJKV1QifQ.eyJzdWIiOiJmaXJlYmFzZS1hZG1pbnNkay1mYnN2Y0BiYXJkLWZyb250ZW5kLmlhbS5nc2VydmljZWFjY291bnQuY29tIiwiYXVkIjoiaHR0cHM6Ly9pZGVudGl0eXRvb2xraXQuZ29vZ2xlYXBpcy5jb20vZ29vZ2xlLmlkZW50aXR5LmlkZW50aXR5dG9vbGtpdC52MS5JZGVudGl0eVRvb2xraXQiLCJ1aWQiOiIwOTA5NzQ3Nzk2MTQ1NDg5MjExNiIsImlzcyI6ImZpcmViYXNlLWFkbWluc2RrLWZic3ZjQGJhcmQtZnJvbnRlbmQuaWFtLmdzZXJ2aWNlYWNjb3VudC5jb20iLCJjbGFpbXMiOnsiYXBwSWQiOiI4ODE5ZTQ4MGE2NzYtbm9vcl9hbF9oYWRheWEuaHRtbC03MTYifSwiZXhwIjoxNzc4MjU1NjM0LCJpYXQiOjE3NzgyNTIwMzQsImFsZyI6IlJTMjU2In0.PgWqA9xTqc1gHLJcMJ_tKC7mc0TFFbtVZriBLTHU5IVDIiCvbiTfZbzvEN0ohwOcBU4g5RmfOr_yk_tdu6IT7TofAhyJDBY79qXG5YqjaoRy8JPHaEmawK6DszuZpthM94ROwmYfBgZhsFoD-aaeYa1ekHMRSD3s9F89lhH1-t1AVC8q3m2fa9r1L4wyq-Ckdh7nkeZ6p_vhL2DIZHYU3nYG33XBp_64xCDHUeALwM4RcGov8_6ZB1AE1Q4H0nDVADZYGuYADDp3w8fLJBS2yKKHJfuVKzytyhPM8ZIoJaAPsIzDZiUiREQlUSAdpdCt1SXq2pgumu3f82234pk3Ng","8819e480a676-noor_al_hadaya.html-716")</script><script>(function(){'use strict';var h=typeof Object.defineProperties=="function"?Object.defineProperty:function(a,b,d){if(a==Array.prototype||a==Object.prototype)return a;a[b]=d.value;return a};function l(a){a=["object"==typeof globalThis&&globalThis,a,"object"==typeof window&&window,"object"==typeof self&&self,"object"==typeof global&&global];for(var b=0;b<a.length;++b){var d=a[b];if(d&&d.Math==Math)return d}throw Error("Cannot find global object");}var n=l(this);
+function p(a,b){if(b)a:{var d=n;a=a.split(".");for(var c=0;c<a.length-1;c++){var e=a[c];if(!(e in d))break a;d=d[e]}a=a[a.length-1];c=d[a];b=b(c);b!=c&&b!=null&&h(d,a,{configurable:!0,writable:!0,value:b})}}function r(a){function b(c){return a.next(c)}function d(c){return a.throw(c)}return new Promise(function(c,e){function f(g){g.done?c(g.value):Promise.resolve(g.value).then(b,d).then(f,e)}f(a.next())})}function t(a){return r(a())}
+p("Object.values",function(a){return a?a:function(b){var d=[],c;for(c in b)Object.prototype.hasOwnProperty.call(b,c)&&d.push(b[c]);return d}});p("Array.prototype.includes",function(a){return a?a:function(b,d){var c=this;c instanceof String&&(c=String(c));var e=c.length;d=d||0;for(d<0&&(d=Math.max(d+e,0));d<e;d++){var f=c[d];if(f===b||Object.is(f,b))return!0}return!1}});/*
+
+ MIT License
+
+ Copyright (c) 2017-2023 W.Y.
+
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ SOFTWARE.
+
+*/
+function u(a,b){var d=a.style;b.backgroundColor&&(d.backgroundColor=b.backgroundColor);b.width&&(d.width=`${b.width}px`);b.height&&(d.height=`${b.height}px`);var c=b.style;c!=null&&Object.keys(c).forEach(e=>{d[e]=c[e]})};var v=(()=>{var a=0;return()=>{a+=1;return`u${`0000${(Math.random()*1679616<<0).toString(36)}`.slice(-4)}${a}`}})();function w(a){var b=[];for(let d=0,c=a.length;d<c;d++)b.push(a[d]);return b}let x=null;function y(a={}){return x?x:a.l?x=a.l:x=w(window.getComputedStyle(document.documentElement))}function z(a,b){return(a=(a.ownerDocument.defaultView||window).getComputedStyle(a).getPropertyValue(b))?parseFloat(a.replace("px","")):0}
+function A(a,b={}){var d;if(!(d=b.width)){d=z(a,"border-left-width");var c=z(a,"border-right-width");d=a.clientWidth+d+c}(b=b.height)||(b=z(a,"border-top-width"),c=z(a,"border-bottom-width"),b=a.clientHeight+b+c);return{width:d,height:b}}function B(a){return new Promise((b,d)=>{var c=new Image;c.onload=()=>{c.decode().then(()=>{requestAnimationFrame(()=>b(c))})};c.onerror=d;c.crossOrigin="anonymous";c.decoding="async";c.src=a})}
+function C(a){return t(function*(){return Promise.resolve().then(()=>(new XMLSerializer).serializeToString(a)).then(encodeURIComponent).then(b=>`data:image/svg+xml;charset=utf-8,${b}`)})}
+function D(a,b,d){return t(function*(){var c=document.createElementNS("http://www.w3.org/2000/svg","svg"),e=document.createElementNS("http://www.w3.org/2000/svg","foreignObject");c.setAttribute("width",`${b}`);c.setAttribute("height",`${d}`);c.setAttribute("viewBox",`0 0 ${b} ${d}`);e.setAttribute("width","100%");e.setAttribute("height","100%");e.setAttribute("x","0");e.setAttribute("y","0");e.setAttribute("externalResourcesRequired","true");c.appendChild(e);e.appendChild(a);return C(c)})}
+var E=(a,b)=>{if(a instanceof b)return!0;a=Object.getPrototypeOf(a);return a===null?!1:a.constructor.name===b.name||E(a,b)};function F(a,b){return y(b).map(d=>{var c=a.getPropertyValue(d),e=a.getPropertyPriority(d);return`${d}: ${c}${e?" !important":""};`}).join(" ")}
+function G(a,b,d,c){a=window.getComputedStyle(a,d);var e=a.getPropertyValue("content");if(e!==""&&e!=="none"){var f=v();try{b.className=`${b.className} ${f}`}catch(k){return}e=document.createElement("style");var g=e.appendChild;d=`.${f}:${d}`;a.cssText?(c=a.getPropertyValue("content"),c=`${a.cssText} content: '${c.replace(/'|"/g,"")}';`):c=F(a,c);g.call(e,document.createTextNode(`${d}{${c}}`));b.appendChild(e)}};function H(a){return a.search(/^(data:)/)!==-1}function I(a,b,d){return t(function*(){var c=yield fetch(a,b);if(c.status===404)throw Error(`Resource "${c.url}" not found`);var e=yield c.blob();return new Promise((f,g)=>{var k=new FileReader;k.onerror=g;k.onloadend=()=>{try{f(d({o:c,result:k.result}))}catch(m){g(m)}};k.readAsDataURL(e)})})}const J={};function K(a,b,d){var c=a.replace(/\?.*/,"");d&&(c=a);/ttf|otf|eot|woff2?/i.test(c)&&(c=c.replace(/.*\//,""));return b?`[${b}]${c}`:c}
+function L(a,b,d){return t(function*(){var c=K(a,b,d.C);if(J[c]!=null)return J[c];d.u&&(a+=(/\?/.test(a)?"&":"?")+(new Date).getTime());try{let f=yield I(a,d.i,({o:g,result:k})=>{b||(b=g.headers.get("Content-Type")||"");return k.split(/,/)[1]});var e=`data:${b};base64,${f}`}catch(f){e=d.B||""}return J[c]=e})};const M={P:"application/font-woff",R:"application/font-woff",N:"application/font-truetype",v:"application/vnd.ms-fontobject",H:"image/png",F:"image/jpeg",D:"image/jpeg",A:"image/gif",M:"image/tiff",L:"image/svg+xml",O:"image/webp"};function N(a){return(a=/\.([^./]*?)$/g.exec(a))?a[1]:""};function O(a){return t(function*(){var b=a.toDataURL();return b==="data:,"?a.cloneNode(!1):B(b)})}function aa(a,b){return t(function*(){if(a.currentSrc){var d=document.createElement("canvas");let c=d.getContext("2d");d.width=a.clientWidth;d.height=a.clientHeight;c==null||c.drawImage(a,0,0,d.width,d.height);d=d.toDataURL();return B(d)}d=a.poster;d=yield L(d,M[N(d).toLowerCase()]||"",b);return B(d)})}
+function ba(a,b){return t(function*(){try{let d;if(a==null?0:(d=a.contentDocument)==null?0:d.body)return yield P(a.contentDocument.body,b,!0)}catch(d){}return a.cloneNode(!1)})}function ca(a,b){return t(function*(){return E(a,HTMLCanvasElement)?O(a):E(a,HTMLVideoElement)?aa(a,b):E(a,HTMLIFrameElement)?ba(a,b):a.cloneNode(a.tagName!=null&&a.tagName.toUpperCase()==="SVG")})}
+function da(a,b,d){return t(function*(){if(b.tagName!=null&&b.tagName.toUpperCase()==="SVG")return b;var c=[];if(a.tagName!=null&&a.tagName.toUpperCase()==="SLOT"&&a.assignedNodes)c=w(a.assignedNodes());else{let e;if(E(a,HTMLIFrameElement)&&((e=a.contentDocument)==null?0:e.body))c=w(a.contentDocument.body.childNodes);else{let f;c=w(((f=a.shadowRoot)!=null?f:a).childNodes)}}if(c.length===0||E(a,HTMLVideoElement))return b;yield c.reduce((e,f)=>e.then(()=>P(f,d)).then(g=>{g&&b.appendChild(g)}),Promise.resolve());
+return b})}function ea(a,b,d){var c=b.style;if(c){var e=window.getComputedStyle(a);e.cssText?(c.cssText=e.cssText,c.transformOrigin=e.transformOrigin):y(d).forEach(f=>{var g=e.getPropertyValue(f);f==="font-size"&&g.endsWith("px")&&(g=`${Math.floor(parseFloat(g.substring(0,g.length-2)))-.1}px`);E(a,HTMLIFrameElement)&&f==="display"&&g==="inline"&&(g="block");f==="d"&&b.getAttribute("d")&&(g=`path(${b.getAttribute("d")})`);c.setProperty(f,g,e.getPropertyPriority(f))})}}
+function fa(a,b){E(a,HTMLSelectElement)&&(b=Array.from(b.children).find(d=>a.value===d.getAttribute("value")))&&b.setAttribute("selected","")}
+function ha(a,b){return t(function*(){var d=a.querySelectorAll?a.querySelectorAll("use"):[];if(d.length===0)return a;var c={};for(var e=0;e<d.length;e++){var f=d[e].getAttribute("xlink:href");if(f){let g=document.querySelector(f);a.querySelector(f)||!g||c[f]||(c[f]=yield P(g,b,!0))}}d=Object.values(c);if(d.length){c=document.createElementNS("http://www.w3.org/1999/xhtml","svg");c.setAttribute("xmlns","http://www.w3.org/1999/xhtml");c.style.position="absolute";c.style.width="0";c.style.height="0";
+c.style.overflow="hidden";c.style.display="none";e=document.createElementNS("http://www.w3.org/1999/xhtml","defs");c.appendChild(e);for(f=0;f<d.length;f++)e.appendChild(d[f]);a.appendChild(c)}return a})}
+function P(a,b,d){return t(function*(){return d||!b.filter||b.filter(a)?Promise.resolve(a).then(c=>ca(c,b)).then(c=>da(a,c,b)).then(c=>{E(c,Element)&&(ea(a,c,b),G(a,c,":before",b),G(a,c,":after",b),E(a,HTMLTextAreaElement)&&(c.textContent=a.value),E(a,HTMLInputElement)&&c.setAttribute("value",a.value),fa(a,c));return c}).then(c=>ha(c,b)):null})};const Q=/url\((['"]?)([^'"]+?)\1\)/g,ia=/url\([^)]+\)\s*format\((["']?)([^"']+)\1\)/g,ja=/src:\s*(?:url\([^)]+\)\s*format\([^)]+\)[,;]\s*)+/g;function ka(a){var b=[];a.replace(Q,(d,c,e)=>{b.push(e);return d});return b.filter(d=>!H(d))}
+function la(a,b,d,c){return t(function*(){try{let e=d?(new URL(b,d||void 0)).toString():b,f;f=yield L(e,M[N(b).toLowerCase()]||"",c);return a.replace(new RegExp(`(url\\(['"]?)(${b.replace(/([.*+?^${}()|\[\]\/\\])/g,"\\$1")})(['"]?\\))`,"g"),`$1${f}$3`)}catch(e){}return a})}function ma(a,{I:b}){return b?a.replace(ja,d=>{for(;;){let [c,,e]=ia.exec(d)||[];if(!e)return"";if(e===b)return`src: ${c};`}}):a}
+function R(a,b,d){return t(function*(){if(a.search(Q)===-1)return a;var c=ma(a,d);return ka(c).reduce((e,f)=>e.then(g=>la(g,f,b,d)),Promise.resolve(c))})};function S(a,b,d){return t(function*(){var c,e=(c=b.style)==null?void 0:c.getPropertyValue(a);return e?(c=yield R(e,null,d),b.style.setProperty(a,c,b.style.getPropertyPriority(a)),!0):!1})}function na(a,b){return t(function*(){(yield S("background",a,b))||(yield S("background-image",a,b));(yield S("mask",a,b))||(yield S("-webkit-mask",a,b))||(yield S("mask-image",a,b))||(yield S("-webkit-mask-image",a,b))})}
+function oa(a,b){return t(function*(){var d=E(a,HTMLImageElement);if(d&&!H(a.src)||E(a,SVGImageElement)&&!H(a.href.baseVal)){var c=d?a.src:a.href.baseVal,e=yield L(c,M[N(c).toLowerCase()]||"",b);yield new Promise((f,g)=>{a.onload=f;a.onerror=b.m?(...k)=>{try{f(b.m(...k))}catch(m){g(m)}}:g;a.decode&&(a.decode=f);a.loading==="lazy"&&(a.loading="eager");d?(a.srcset="",a.src=e):a.href.baseVal=e})}})}
+function pa(a,b){return t(function*(){var d=w(a.childNodes).map(c=>T(c,b));yield Promise.all(d).then(()=>a)})}function T(a,b){return t(function*(){E(a,Element)&&(yield na(a,b),yield oa(a,b),yield pa(a,b))})};const U={};function V(a){return t(function*(){var b=U[a];if(b!=null)return b;b=yield(yield fetch(a)).text();b={url:a,cssText:b};return U[a]=b})}function W(a,b){return t(function*(){var d=a.cssText,c=/url\(["']?([^"')]+)["']?\)/g,e=(d.match(/url\([^)]+\)/g)||[]).map(f=>t(function*(){var g=f.replace(c,"$1");g.startsWith("https://")||(g=(new URL(g,a.url)).href);return I(g,b.i,({result:k})=>{d=d.replace(f,`url(${k})`);return[f,k]})}));return Promise.all(e).then(()=>d)})}
+function X(a){if(a==null)return[];var b=[];a=a.replace(/(\/\*[\s\S]*?\*\/)/gi,"");for(var d=RegExp("((@.*?keyframes [\\s\\S]*?){([\\s\\S]*?}\\s*?)})","gi");;){var c=d.exec(a);if(c===null)break;b.push(c[0])}a=a.replace(d,"");d=/@import[\s\S]*?url\([^)]*\)[\s\S]*?;/gi;for(c=RegExp("((\\s*?(?:\\/\\*[\\s\\S]*?\\*\\/)?\\s*?@media[\\s\\S]*?){([\\s\\S]*?)}\\s*?})|(([\\s\\S]*?){([\\s\\S]*?)})","gi");;){let e=d.exec(a);if(e===null)if(e=c.exec(a),e===null)break;else d.lastIndex=c.lastIndex;else c.lastIndex=
+d.lastIndex;b.push(e[0])}return b}
+function qa(a,b){return t(function*(){var d=[],c=[];a.forEach(e=>{if("cssRules"in e)try{w(e.cssRules||[]).forEach((f,g)=>{if(f.type===CSSRule.IMPORT_RULE){let k=g+1;f=V(f.href).then(m=>W(m,b)).then(m=>X(m).forEach(q=>{try{e.insertRule(q,q.startsWith("@import")?k+=1:e.cssRules.length)}catch(Da){}})).catch(()=>{});c.push(f)}})}catch(f){let g=a.find(k=>k.href==null)||document.styleSheets[0];e.href!=null&&c.push(V(e.href).then(k=>W(k,b)).then(k=>X(k).forEach(m=>{g.insertRule(m,g.cssRules.length)})).catch(()=>
+{}))}});return Promise.all(c).then(()=>{a.forEach(e=>{if("cssRules"in e)try{w(e.cssRules||[]).forEach(f=>{d.push(f)})}catch(f){}});return d})})}function ra(a){return a.filter(b=>b.type===CSSRule.FONT_FACE_RULE).filter(b=>b.style.getPropertyValue("src").search(Q)!==-1)}function sa(a,b){return t(function*(){if(a.ownerDocument==null)throw Error("Provided element is not within a Document");var d=w(a.ownerDocument.styleSheets);d=yield qa(d,b);return ra(d)})}
+function ta(a){function b(c){(c.style.fontFamily||getComputedStyle(c).fontFamily).split(",").forEach(e=>{d.add(e.trim().replace(/["']/g,""))});Array.from(c.children).forEach(e=>{e instanceof HTMLElement&&b(e)})}var d=new Set;b(a);return d}function ua(a,b){return t(function*(){var d=yield sa(a,b),c=ta(a);return(yield Promise.all(d.filter(e=>c.has(e.style.fontFamily.trim().replace(/["']/g,""))).map(e=>R(e.cssText,e.parentStyleSheet?e.parentStyleSheet.href:null,b)))).join("\n")})}
+function va(a,b){return t(function*(){var d=b.j!=null?b.j:b.K?null:yield ua(a,b);if(d){let c=document.createElement("style");c.appendChild(document.createTextNode(d));a.firstChild?a.insertBefore(c,a.firstChild):a.appendChild(c)}})};function wa(a,b={}){return t(function*(){var {width:d,height:c}=A(a,b),e=yield P(a,b,!0);yield va(e,b);yield T(e,b);u(e,b);return yield D(e,d,c)})}
+function xa(a,b={}){return t(function*(){var {width:d,height:c}=A(a,b),e=yield wa(a,b);e=yield B(e);var f=document.createElement("canvas"),g=f.getContext("2d"),k=b.G||window.devicePixelRatio||1,m=b.h||d,q=b.g||c;f.width=m*k;f.height=q*k;!b.J&&(f.width>16384||f.height>16384)&&(f.width>16384&&f.height>16384?f.width>f.height?(f.height*=16384/f.width,f.width=16384):(f.width*=16384/f.height,f.height=16384):f.width>16384?(f.height*=16384/f.width,f.width=16384):(f.width*=16384/f.height,f.height=16384));
+f.style.width=`${m}`;f.style.height=`${q}`;b.backgroundColor&&(g.fillStyle=b.backgroundColor,g.fillRect(0,0,f.width,f.height));g.drawImage(e,0,0,f.width,f.height);return f})}function ya(a,b={}){return t(function*(){return(yield xa(a,b)).toDataURL()})};const za=["gemini.google.com","corp.google.com","proxy.googlers.com"];function Y(){return document.body.querySelectorAll('[class*="animate"]').length>0}function Z(a){return t(function*(){try{return yield ya(a,{h:a.offsetWidth,g:a.offsetHeight})}catch(d){var b=a.offsetHeight;let c=document.createElement("canvas");c.width=a.offsetWidth;c.height=b;return c.toDataURL("image/png")}})}
+function Aa(){return t(function*(){var a=document.body.offsetWidth,b=document.body.offsetHeight,d=document.body.cloneNode(!0);d.querySelectorAll('[class*="animate"]').forEach(c=>{c.classList.remove(...Array.from(c.classList).filter(e=>e.startsWith("animate")))});d.style.width=`${a}px`;d.style.height=`${b}px`;return d})}
+function Ba(a){return t(function*(){var b=document.body;if(Y()){var d=yield Aa();b=d;document.body.appendChild(d)}d=yield Z(b);Y()&&document.body.removeChild(b);window.parent.postMessage({type:"SEND_SCREENSHOT",image:d,topOffset:document.documentElement.scrollTop},a.origin)})}function Ca(a){return t(function*(){var b={type:"SEND_SCREENSHOT_FOR_DATA_VISUALIZATION",image:yield Z(document.body),topOffset:0};window.parent.postMessage(b,a.origin)})}
+window.addEventListener("message",a=>t(function*(){if(za.some(d=>a.origin.includes(d))){var b=a.data;b&&(b.type==="MAKE_SCREENSHOT"&&(yield Ba(a)),b.type==="MAKE_SCREENSHOT_FOR_DATA_VISUALIZATION"&&(yield Ca(a)))}}));
+})();</script><script>(function() {
+  // Ensure this script is executed only once
+  if (window.firebaseAuthBridgeScriptLoaded) {
+    return;
+  }
+  window.firebaseAuthBridgeScriptLoaded = true;
+
+  let nextTokenPromiseId = 0;
+
+  // Stores { resolve, reject } for ongoing token requests
+  const pendingTokenPromises = {};
+
+  // Listen for messages from the Host Application
+  window.addEventListener('message', function(event) {
+
+    const messageData = event.data;
+
+  if (messageData && messageData.type === 'RESOLVE_NEW_FIREBASE_TOKEN') {
+      const { success, token, error, promiseId } = messageData ?? {};
+      if (pendingTokenPromises[promiseId]) {
+        if (success) {
+          pendingTokenPromises[promiseId].resolve(token);
+        } else {
+          pendingTokenPromises[promiseId].reject(new Error(error || 'Token refresh failed from host.'));
+        }
+        delete pendingTokenPromises[promiseId];
+      }
+    }
+  });
+
+  // Expose a function for the Generated App to request a new Firebase token
+  window.requestNewFirebaseToken = function() {
+    const currentPromiseId = nextTokenPromiseId++;
+    const promise = new Promise((resolve, reject) => {
+      pendingTokenPromises[currentPromiseId] = { resolve, reject };
+    });
+    if (window.parent && window.parent !== window) {
+      window.parent.postMessage({
+        type: 'REQUEST_NEW_FIREBASE_TOKEN',
+        promiseId: currentPromiseId
+      }, '*');
+    } else {
+      pendingTokenPromises[currentPromiseId].reject(new Error('No parent window to request token from.'));
+      delete pendingTokenPromises[currentPromiseId];
+    }
+    return promise;
+  };
+})();</script><script>
+let realOriginalGetUserMedia = null;
+if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+  realOriginalGetUserMedia = navigator.mediaDevices.getUserMedia.bind(navigator.mediaDevices);
+}
+
+(function() {
+  if (navigator.mediaDevices && navigator.mediaDevices.__proto__) {
+    try {
+      Object.defineProperty(navigator.mediaDevices.__proto__, 'getUserMedia', {
+        get: function() {
+          return undefined; // Or throw an error
+        },
+        configurable: false
+      });
+    } catch (error) {
+      console.error("Error defining prototype getter:", error);
+    }
+  }
+})();
+
+(function() {
+  const pendingMediaResolvers = {};
+  let nextMediaPromiseId = 0;
+
+  function requestMediaPermissions(constraints) {
+    const mediaPromiseId = nextMediaPromiseId++;
+    const promise = new Promise((resolve, reject) => {
+      pendingMediaResolvers[mediaPromiseId] = (granted) => {
+        delete pendingMediaResolvers[mediaPromiseId];
+        resolve(granted);
+      };
+    });
+
+    window.parent.postMessage({
+      type: 'requestMediaPermission',
+      constraints: constraints,
+      promiseId: mediaPromiseId,
+    }, '*');
+
+    return promise;
+  }
+
+  let originalGetUserMedia = realOriginalGetUserMedia;
+
+  function interceptGetUserMedia() {
+    if (navigator.mediaDevices) {
+      Object.defineProperty(navigator.mediaDevices, 'getUserMedia', {
+        value: function(constraints) {
+          return requestMediaPermissions(constraints).then((granted) => {
+            if (granted) {
+              if (originalGetUserMedia) {
+                return originalGetUserMedia(constraints);
+              } else {
+                throw new Error("Original getUserMedia not available.");
+              }
+            } else {
+              throw new DOMException('Permission denied', 'NotAllowedError');
+            }
+          });
+        },
+        writable: false,
+        configurable: false
+      });
+    }
+  }
+
+  interceptGetUserMedia();
+
+  const observer = new MutationObserver(function(mutationsList, observer) {
+    for (const mutation of mutationsList) {
+      if (mutation.type === 'reconfigured' && mutation.name === 'getUserMedia' && mutation.object === navigator.mediaDevices) {
+        interceptGetUserMedia();
+      } else if (mutation.type === 'attributes' && mutation.attributeName === 'getUserMedia' && mutation.target === navigator.mediaDevices) {
+        interceptGetUserMedia();
+      } else if (mutation.type === 'childList' && mutation.addedNodes) {
+        mutation.addedNodes.forEach(node => {
+          if (node === navigator.mediaDevices) {
+            interceptGetUserMedia();
+          }
+        });
+      }
+    }
+  });
+
+  function interceptSpeechRecognition() {
+    if (!window.SpeechRecognition && !window.webkitSpeechRecognition) {
+      return;
+    }
+
+    const OriginalSpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+    const SpeechRecognitionWrapper = function(...args) {
+      const recognizer = new OriginalSpeechRecognition(...args);
+      const originalStart = recognizer.start.bind(recognizer);
+
+      recognizer.start = function() {
+        requestMediaPermissions({ audio: true }).then(granted => {
+          if (granted) {
+            originalStart();
+          } else {
+            const errorEvent = new SpeechRecognitionErrorEvent('error');
+            errorEvent.error = 'not-allowed'; // This is the standard error for permission denial.
+            recognizer.dispatchEvent(errorEvent);
+          }
+        });
+      };
+
+      return recognizer;
+    };
+
+    SpeechRecognitionWrapper.prototype = OriginalSpeechRecognition.prototype;
+    SpeechRecognitionWrapper.prototype.constructor = SpeechRecognitionWrapper;
+
+    if (window.SpeechRecognition) {
+      window.SpeechRecognition = SpeechRecognitionWrapper;
+    }
+    if (window.webkitSpeechRecognition) {
+      window.webkitSpeechRecognition = SpeechRecognitionWrapper;
+    }
+  }
+
+  interceptSpeechRecognition();
+
+  window.addEventListener('message', function(event) {
+    if (event.data) {
+      if (event.data.type === 'resolveMediaPermission') {
+        const { promiseId, granted } = event.data;
+        if (pendingMediaResolvers[promiseId]) {
+          pendingMediaResolvers[promiseId](granted);
+        }
+      }
+    }
+  });
+
+})();</script><script ws-interception-config="{&quot;parentOrigin&quot;:&quot;https://gemini.google.com&quot;,&quot;proxiedDomains&quot;:[]}">(function(){'use strict';var u=typeof Object.defineProperties=="function"?Object.defineProperty:function(b,d,e){if(b==Array.prototype||b==Object.prototype)return b;b[d]=e.value;return b};function v(b){b=["object"==typeof globalThis&&globalThis,b,"object"==typeof window&&window,"object"==typeof self&&self,"object"==typeof global&&global];for(var d=0;d<b.length;++d){var e=b[d];if(e&&e.Math==Math)return e}throw Error("Cannot find global object");}var w=v(this);
+function y(b,d){if(d)a:{var e=w;b=b.split(".");for(var h=0;h<b.length-1;h++){var k=b[h];if(!(k in e))break a;e=e[k]}b=b[b.length-1];h=e[b];d=d(h);d!=h&&d!=null&&u(e,b,{configurable:!0,writable:!0,value:d})}}function z(b){function d(h){return b.next(h)}function e(h){return b.throw(h)}return new Promise(function(h,k){function m(n){n.done?h(n.value):Promise.resolve(n.value).then(d,e).then(m,k)}m(b.next())})}y("globalThis",function(b){return b||w});/*
+
+ Copyright The Closure Library Authors.
+ SPDX-License-Identifier: Apache-2.0
+*/
+function A(b,d){function e(){}e.prototype=d.prototype;b.i=d.prototype;b.prototype=new e;b.prototype.constructor=b;b.g=function(h,k,m){for(var n=Array(arguments.length-2),p=2;p<arguments.length;p++)n[p-2]=arguments[p];return d.prototype[k].apply(h,n)}};function B(b,d,e="*"){function h(a){if(typeof a==="string")return F.encode(a).buffer;if(a instanceof ArrayBuffer)return a.slice(0);if(ArrayBuffer.isView(a))return a.buffer.slice(a.byteOffset,a.byteOffset+a.byteLength);throw Error("Invalid data type");}function k(a){a=h(a);var f={type:"send",data:new Uint8Array(a)},g;(g=r)==null||g.postMessage(f,[a])}function m(){if(!r)throw Error("Data port not captured yet.");r.onmessage=a=>{if(a.data.type==="message"){a=new MessageEvent("message",{data:G.decode(a.data.data)});
+let f;(f=c.onmessage)==null||f.call(c,a);c.dispatchEvent(a)}}}function n(){if(!t)throw Error("Control port not captured yet.");t.onmessage=a=>{switch(a.data.type){case "open":l=1;var f=new Event("open"),g;(g=c.onopen)==null||g.call(c,f);c.dispatchEvent(f);q.forEach(H=>{k(H)});q=[];break;case "close":g=a.data;l=3;g=new CloseEvent("close",{code:g.code,reason:g.reason,wasClean:g.wasClean});(f=c.onclose)==null||f.call(c,g);c.dispatchEvent(g);break;case "error":l=3;f=new Event("error");let x;(x=c.onerror)==
+null||x.call(c,f);c.dispatchEvent(f)}}}function p(a){return z(function*(){var f=new MessageChannel;t=f.port1;var g=new MessageChannel;r=g.port1;n();m();window.parent.postMessage({type:"websocket_open",portOrdering:["control","data"],url:b,protocols:a||[],connectionId:I},e,[f.port2,g.port2])}())}var c=Reflect.construct(EventTarget,[],new.target);c.CONNECTING=0;c.OPEN=1;c.CLOSING=2;c.CLOSED=3;c.url=b;c.binaryType="arraybuffer";c.protocol="";c.h="";var l=0,t=null,r=null,q=[],F=new TextEncoder,G=new TextDecoder;
+c.onopen=null;c.onmessage=null;c.onclose=null;c.onerror=null;Object.defineProperty(c,"readyState",{get:()=>l,enumerable:!0,configurable:!0});Object.defineProperty(c,"bufferedAmount",{get:()=>{var a=0;q.forEach(f=>{a+=typeof f==="string"?f.length:f.byteLength});return a},enumerable:!0,configurable:!0});var I=function(){var a;return((a=globalThis.crypto)==null?0:a.randomUUID)?globalThis.crypto.randomUUID():"xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g,f=>{var g=Math.random()*16|0;return(f===
+"x"?g:g&3|8).toString(16)})}();c.send=a=>{if(l===1)a instanceof Blob?a.arrayBuffer().then(f=>{k(f)}):k(a);else if(l===0)if(typeof a==="string")q.push(a);else if(a instanceof ArrayBuffer||ArrayBuffer.isView(a))q.push(h(a));else throw Error("Sending Blob is not supported before the connection is open.");else console.debug("WebSocket send called in CLOSING or CLOSED state; ignored.")};c.close=(a=1E3,f="")=>{if(l!==2&&l!==3){l=2;a={type:"close",code:a,reason:f,wasClean:a===1E3};var g;(g=t)==null||g.postMessage(a)}};
+Promise.resolve().then(()=>p(d));return c}A(B,EventTarget);var C=document.currentScript,D=C==null?void 0:C.getAttribute("ws-interception-config");if(!D)throw Error("WebSocket Interceptor: Missing ws-interception-config attribute in the script tag.");var E=JSON.parse(D);if(!E.parentOrigin||typeof E.parentOrigin!=="string")throw Error("WebSocket Interceptor: Invalid parentOrigin in ws-interception-config");
+(function(b){var d=Object.getOwnPropertyDescriptor(window,"WebSocket");if(!d||d.writable||d.configurable)d=Object.assign(function(e,h){try{let k=(new URL(e)).hostname;if(b.proxiedDomains.some(m=>k===m||k.endsWith(`.${m}`)))return new B(e,h,b.parentOrigin)}catch(k){throw window.parent.postMessage({type:"websocket_blocked",url:e,reason:"blocked_invalid_url"},b.parentOrigin),new DOMException(`WebSocket connection to '${e}' is not allowed in Canvas.`,"SecurityError");}window.parent.postMessage({type:"websocket_blocked",
+url:e,reason:"blocked_domain_not_allowlisted"},b.parentOrigin);throw new DOMException(`WebSocket connection to '${e}' is not allowed in Canvas.`,"SecurityError");},{CONNECTING:0,OPEN:1,CLOSING:2,CLOSED:3}),Object.defineProperty(window,"WebSocket",{value:d,writable:!1,configurable:!1})})({proxiedDomains:E.proxiedDomains||[],parentOrigin:E.parentOrigin});}).call(this);
+</script><script>((function(modelInformation) {
+  const originalFetch = window.fetch;
+  // TODO: b/421908508 - Move these out of the script and match all generative AI model calls.
+  let googleLlmBaseApiUrls = [
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.textModelName + ':streamGenerateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.textModelName + ':generateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageModelName + ':predict',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageModelName + ':predictLongRunning',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageEditModelName + ':generateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageTransformModelName + ':generateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.videoModelName + ':predict',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.videoModelName + ':predictLongRunning',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.ttsModelName + ':generateContent',
+  ];
+  modelInformation.deprecatedTextModelNames.forEach((modelName) => {
+    googleLlmBaseApiUrls.push(
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':streamGenerateContent',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':generateContent',
+    );
+  });
+  modelInformation.deprecatedImageModelNames.forEach((modelName) => {
+    googleLlmBaseApiUrls.push(
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':predict',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':predictLongRunning',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':generateContent',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':streamGenerateContent',
+    );
+  });
+  modelInformation.deprecatedGenerateImageModelNames.forEach((modelName) => {
+    googleLlmBaseApiUrls.push(
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':generateContent',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':streamGenerateContent',
+    );
+  });
+
+  const pendingFetchResolvers = {};
+  let nextPromiseId = 0;
+
+  function handleStringInput(input, optionsArgument) {
+    const actualUrl = input;
+    const fetchCallArgs = [actualUrl, optionsArgument];
+    const effectiveOptions = optionsArgument || {};
+    const bodyForApiKeyCheck = effectiveOptions.body;
+    const bodyForPostMessage = effectiveOptions.body;
+    return { actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage };
+  }
+
+  function handleRequestInput(input, optionsArgument) {
+    const actualUrl = input.url;
+    const fetchCallArgs = [input, optionsArgument];
+    const effectiveOptions = { method: input.method, headers: new Headers(input.headers) };
+    let bodyForApiKeyCheck;
+    let bodyForPostMessage;
+
+    if (optionsArgument) {
+      if (optionsArgument.method) effectiveOptions.method = optionsArgument.method;
+      if (optionsArgument.headers) effectiveOptions.headers = new Headers(optionsArgument.headers);
+      if ('body' in optionsArgument) {
+        bodyForApiKeyCheck = optionsArgument.body;
+        bodyForPostMessage = optionsArgument.body;
+      } else {
+        bodyForApiKeyCheck = undefined;
+        bodyForPostMessage = input.body;
+      }
+    } else {
+      bodyForApiKeyCheck = undefined;
+      bodyForPostMessage = input.body;
+    }
+    return { actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage };
+  }
+
+  window.fetch = function(input, optionsArgument) {
+    let actualUrl;
+    let fetchCallArgs;
+    let effectiveOptions = {};
+    let bodyForApiKeyCheck;
+    let bodyForPostMessage;
+
+    if (typeof input === 'string') {
+      ({actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage} = handleStringInput(input, optionsArgument));
+    } else if (input instanceof Request) {
+      ({actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage} = handleRequestInput(input, optionsArgument));
+    } else {
+      return originalFetch.apply(window, [input, optionsArgument]);
+    }
+
+    effectiveOptions.method = effectiveOptions.method || 'GET';
+    if (!effectiveOptions.headers) {
+      effectiveOptions.headers = new Headers();
+    }
+
+
+    if (typeof actualUrl === 'string' && googleLlmBaseApiUrls.some((url) => actualUrl.startsWith(url))) {
+      let apiKeyIsNull = true;
+
+      const regex = new RegExp("models/([^:]+)");
+      const modelNameMatch = actualUrl.match(regex);
+      const modelName = modelNameMatch ? modelNameMatch[1] : 'unspecified';
+
+
+      try {
+        const urlObject = new URL(actualUrl);  // Use URL object for robust parsing
+        const apiKeyParam = urlObject.searchParams.get('key');
+        if (apiKeyParam) {
+          apiKeyIsNull = false;
+        }
+      } catch (e) {
+        // Continue checks even if URL parsing fails
+      }
+
+      if (apiKeyIsNull && effectiveOptions.headers) {
+        const h = new Headers(effectiveOptions.headers);
+        const apiKeyHeaderValue = h.get('X-API-Key') || h.get('x-api-key');
+        if (apiKeyHeaderValue) {
+          apiKeyIsNull = false;
+          return originalFetch.apply(window, fetchCallArgs);
+        }
+      }
+
+      if (apiKeyIsNull && effectiveOptions.method && ['POST', 'PUT', 'PATCH'].includes(effectiveOptions.method.toUpperCase()) && typeof bodyForApiKeyCheck === 'string') {
+        try {
+          const bodyData = JSON.parse(bodyForApiKeyCheck);
+          if (bodyData && bodyData.apiKey) {
+            apiKeyIsNull = false;
+            return originalFetch.apply(window, fetchCallArgs);
+          }
+        } catch (e) {
+          // Ignore JSON parsing errors
+        }
+      }
+
+      if(apiKeyIsNull) {
+        const promiseId = nextPromiseId++;
+        const promise = new Promise((resolve) => {
+          pendingFetchResolvers[promiseId] = (resolvedResponse) => {
+            delete pendingFetchResolvers[promiseId];
+            resolve(resolvedResponse);
+          };
+        });
+
+        let serializedBodyForPostMessage;
+        if (typeof bodyForPostMessage === 'string' || bodyForPostMessage == null) {
+            serializedBodyForPostMessage = bodyForPostMessage;
+        } else if (bodyForPostMessage instanceof ReadableStream) {
+            serializedBodyForPostMessage = null;
+        } else {
+            try {
+                serializedBodyForPostMessage = JSON.stringify(bodyForPostMessage);
+            } catch (e) {
+                serializedBodyForPostMessage = null;
+            }
+        }
+
+        const messageOptions = {
+            method: effectiveOptions.method,
+            headers: Object.fromEntries(new Headers(effectiveOptions.headers).entries()),
+            body: serializedBodyForPostMessage
+        };
+
+        window.parent.postMessage({
+          type: 'requestFetch',
+          url: actualUrl,
+          modelName: modelName,
+          options: messageOptions,
+          promiseId: promiseId,
+        }, '*');
+
+        return promise;
+      }
+      return originalFetch.apply(window, fetchCallArgs);
+    }
+    return originalFetch.apply(window, fetchCallArgs);
+  };
+
+  window.addEventListener('message', function(event) {
+    if (event.data && event.data.type === 'resolveFetch') {
+      const { promiseId, response } = event.data;
+      if (pendingFetchResolvers[promiseId]) {
+        try {
+          const reconstructedResponse = new Response(response.body, {
+            status: response.status,
+            statusText: response.statusText,
+            headers: new Headers(response.headers),
+          });
+          pendingFetchResolvers[promiseId](reconstructedResponse);
+        } catch (error) {
+          pendingFetchResolvers[promiseId](new Response(null, { status: 500, statusText: "Interceptor Response Reconstruction Error" }));
+        }
+      }
+    }
+  });
+
+}))({"textModelName":"gemini-3-flash-preview","imageModelName":"imagen-4.0-generate-001","imageEditModelName":"gemini-3.1-flash-image-preview","imageTransformModelName":"gemini-3-pro-image-preview-11-2025","videoModelName":"veo-2.0-generate-001","ttsModelName":"gemini-2.5-flash-preview-tts","deprecatedTextModelNames":["gemini-2.0-flash","gemini-2.5-flash","gemini-2.5-flash-preview-04-17","gemini-2.5-flash-preview-05-20","gemini-2.5-flash-preview-09-2025"],"deprecatedImageModelNames":["imagen-3.0-generate-001","imagen-3.0-generate-002"],"deprecatedGenerateImageModelNames":["gemini-2.5-flash-image-preview","gemini-2.5-flash-image"]})</script><script>(function(){'use strict';function a(){window.parent.postMessage({type:"interaction"},"*")}window.addEventListener("click",a,{capture:!0,passive:!0});window.addEventListener("touchstart",a,{capture:!0,passive:!0});window.addEventListener("keydown",a,{capture:!0,passive:!0});}).call(this);
+</script><script>(function() {
+  const originalConsoleLog = console.log;
+  const originalConsoleError = console.error;
+
+    /**
+   * Normalizes an error event or a promise rejection reason into a structured error object.
+   * @param {*} errorEventOrReason The error object or reason.
+   * @return {object} Structured error data { message, name, stack }.
+   */
+  function getErrorObject(errorEventOrReason) {
+    if (errorEventOrReason instanceof Error) {
+      return {
+        message: errorEventOrReason.message,
+        name: errorEventOrReason.name,
+        stack: errorEventOrReason.stack,
+      };
+    }
+    // Fallback for non-Error objects.
+    try {
+      return {
+        message: JSON.stringify(errorEventOrReason),
+        name: 'UnknownErrorType',
+        stack: null,
+      };
+    } catch (e) {
+      return {
+        message: String(errorEventOrReason),
+        name: 'UnknownErrorTypeNonStringifiable',
+        stack: null,
+      };
+    }
+  }
+
+  /**
+   * Converts an array of arguments (from log/error) into a single string.
+   * Handles Error objects specially to include their message and stack.
+   * @param {Array<*>} args - Arguments passed to console methods.
+   * @return {string} A string representation of the arguments.
+   */
+  function stringifyArgs(args) {
+    return args
+      .map((arg) => {
+        if (arg instanceof Error) {
+          const {message, stack} = arg;
+          return `Error: ${message}${stack ? ('\nStack: ' + stack) : ''}`;
+        }
+        if (typeof arg === 'object' && arg !== null) {
+          try {
+            return JSON.stringify(arg);
+          } catch (error) {
+            return '[Circular Object]';
+          }
+        } else {
+          return String(arg);
+        }
+      })
+      .join(' ');
+  }
+
+  console.log = function(...args) {
+    const logString = stringifyArgs(args);
+    window.parent.postMessage({ type: 'log', message: logString }, '*');
+    originalConsoleLog.apply(console, args);
+  };
+
+  console.error = function(...args) {
+    let errorData;
+    if (args.length > 0 && args[0] instanceof Error) {
+      const err = args[0];
+      // If the first arg is an Error, capture its details.
+      errorData = {
+        type: 'error',
+        source: 'CONSOLE_ERROR',
+        ...getErrorObject(err),
+        rawArgsString: stringifyArgs(args.slice(1)),
+        timestamp: new Date().toISOString(),
+      };
+    } else {
+      // If not an Error object, treat all args as a general error message.
+      errorData = {
+        type: 'error',
+        source: 'CONSOLE_ERROR',
+        message: stringifyArgs(args),
+        name: 'ConsoleLoggedError',
+        stack: null,
+        timestamp: new Date().toISOString(),
+      };
+    }
+    window.parent.postMessage(errorData, '*');
+    originalConsoleError.apply(console, args);
+  };
+
+  // Listen for global unhandled synchronous errors.
+  window.addEventListener('error', function(event) {
+    const errorDetails = event.error ? getErrorObject(event.error) : {
+      message: event.message,
+      name: 'GlobalError',
+      stack: null,
+      filename: event.filename,
+      lineno: event.lineno,
+      colno: event.colno,
+    };
+
+    window.parent.postMessage({
+      type: 'error',
+      source: 'global',
+      ...errorDetails,
+      message: errorDetails.message || event.message,
+      timestamp: new Date().toISOString(),
+    }, '*');
+  });
+
+  // Listen for unhandled promise rejections (asynchronous errors).
+  window.addEventListener('unhandledrejection', function(event) {
+    const errorDetails = getErrorObject(event.reason);
+
+    window.parent.postMessage({
+      type: 'error',
+      source: 'unhandledrejection',
+      ...errorDetails,
+      message: errorDetails.message || 'Unhandled Promise Rejection',
+      timestamp: new Date().toISOString(),
+    }, '*');
+  });
+
+})();</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Noor Al-Hadaya</title>
+    
+    <!-- PWA Settings -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Noor Al-Hadaya">
+    <meta name="theme-color" content="#020617">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&amp;family=Tajawal:wght@400;700&amp;display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --emerald: #10b981;
+            --bg-dark: #020617;
+            --page: #0b1222;
+        }
+
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: var(--bg-dark);
+            color: #f1f5f9;
+            margin: 0;
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .quran-font { font-family: 'Amiri', serif; }
+
+        /* تنسيق المصحف المنظم جداً */
+        .quran-container {
+            background-color: var(--page);
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 50px 30px;
+            text-align: center;
+            line-height: 3.5;
+            font-size: 2.2rem;
+            min-height: 100vh;
+            border-left: 1px solid rgba(255,255,255,0.02);
+            border-right: 1px solid rgba(255,255,255,0.02);
+        }
+
+        .ayah-text {
+            display: inline;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .ayah-text:active { color: var(--emerald); }
+
+        .ayah-end {
+            display: inline-flex;
+            width: 38px;
+            height: 38px;
+            border: 1.5px solid var(--emerald);
+            color: var(--emerald);
+            border-radius: 50%;
+            font-size: 16px;
+            align-items: center;
+            justify-content: center;
+            margin: 0 12px;
+            font-family: sans-serif;
+            font-weight: bold;
+            vertical-align: middle;
+            background: rgba(16, 185, 129, 0.05);
+        }
+
+        .nav-glass {
+            background: rgba(2, 6, 23, 0.9);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .btn-tasbih {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            border: 4px solid rgba(16, 185, 129, 0.1);
+            background: radial-gradient(circle, rgba(16, 185, 129, 0.05) 0%, transparent 70%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            transition: transform 0.1s;
+            cursor: pointer;
+        }
+
+        .btn-tasbih:active { transform: scale(0.94); border-color: var(--emerald); }
+
+        /* زر التحميل */
+        .download-btn {
+            background: var(--emerald);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 20px auto;
+            box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3);
+        }
+
+        ::-webkit-scrollbar { width: 0; }
+    </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.fixed{position:fixed}.sticky{position:sticky}.inset-0{inset:0px}.bottom-\[-100\%\]{bottom:-100%}.left-0{left:0px}.top-0{top:0px}.z-50{z-index:50}.z-\[100\]{z-index:100}.z-\[200\]{z-index:200}.mb-12{margin-bottom:3rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.mt-2{margin-top:0.5rem}.mt-8{margin-top:2rem}.flex{display:flex}.grid{display:grid}.hidden{display:none}.h-10{height:2.5rem}.h-1\.5{height:0.375rem}.h-4{height:1rem}.w-10{width:2.5rem}.w-12{width:3rem}.w-full{width:100%}.w-1\.5{width:0.375rem}.w-4{width:1rem}.w-5{width:1.25rem}.flex-1{flex:1 1 0%}.cursor-pointer{cursor:pointer}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.flex-col{flex-direction:column}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-10{gap:2.5rem}.gap-2{gap:0.5rem}.gap-3{gap:0.75rem}.gap-4{gap:1rem}.space-y-12 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(3rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(3rem * var(--tw-space-y-reverse))}.overflow-y-auto{overflow-y:auto}.rounded-\[50px\]{border-radius:50px}.rounded-full{border-radius:9999px}.rounded-xl{border-radius:0.75rem}.rounded-2xl{border-radius:1rem}.rounded-t-\[40px\]{border-top-left-radius:40px;border-top-right-radius:40px}.border{border-width:1px}.border-t{border-top-width:1px}.border-t-2{border-top-width:2px}.border-emerald-500{--tw-border-opacity:1;border-color:rgb(16 185 129 / var(--tw-border-opacity, 1))}.border-white\/5{border-color:rgb(255 255 255 / 0.05)}.bg-emerald-600{--tw-bg-opacity:1;background-color:rgb(5 150 105 / var(--tw-bg-opacity, 1))}.bg-red-500\/10{background-color:rgb(239 68 68 / 0.1)}.bg-slate-900{--tw-bg-opacity:1;background-color:rgb(15 23 42 / var(--tw-bg-opacity, 1))}.bg-slate-900\/40{background-color:rgb(15 23 42 / 0.4)}.bg-slate-950{--tw-bg-opacity:1;background-color:rgb(2 6 23 / var(--tw-bg-opacity, 1))}.bg-white\/5{background-color:rgb(255 255 255 / 0.05)}.bg-emerald-500{--tw-bg-opacity:1;background-color:rgb(16 185 129 / var(--tw-bg-opacity, 1))}.bg-white\/10{background-color:rgb(255 255 255 / 0.1)}.p-10{padding:2.5rem}.p-4{padding:1rem}.p-6{padding:1.5rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-1\.5{padding-top:0.375rem;padding-bottom:0.375rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-20{padding-top:5rem;padding-bottom:5rem}.text-center{text-align:center}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-6xl{font-size:3.75rem;line-height:1}.text-\[10px\]{font-size:10px}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-black{font-weight:900}.font-bold{font-weight:700}.leading-relaxed{line-height:1.625}.tracking-\[0\.5em\]{letter-spacing:0.5em}.text-blue-500{--tw-text-opacity:1;color:rgb(59 130 246 / var(--tw-text-opacity, 1))}.text-emerald-400{--tw-text-opacity:1;color:rgb(52 211 153 / var(--tw-text-opacity, 1))}.text-emerald-500{--tw-text-opacity:1;color:rgb(16 185 129 / var(--tw-text-opacity, 1))}.text-pink-500{--tw-text-opacity:1;color:rgb(236 72 153 / var(--tw-text-opacity, 1))}.text-red-500{--tw-text-opacity:1;color:rgb(239 68 68 / var(--tw-text-opacity, 1))}.text-slate-200{--tw-text-opacity:1;color:rgb(226 232 240 / var(--tw-text-opacity, 1))}.opacity-20{opacity:0.2}.opacity-30{opacity:0.3}.opacity-50{opacity:0.5}.opacity-10{opacity:0.1}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-500{transition-duration:500ms}.duration-300{transition-duration:300ms}.hover\:scale-110:hover{--tw-scale-x:1.1;--tw-scale-y:1.1;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:opacity-100:hover{opacity:1}.active\:scale-95:active{--tw-scale-x:.95;--tw-scale-y:.95;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@media (min-width: 640px){.sm\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}}</style></head>
+<body>
+
+    <div id="homeView">
+        <header class="p-6 flex justify-between items-center nav-glass sticky top-0 z-50">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-emerald-600 rounded-xl flex items-center justify-center font-bold shadow-lg">NH</div>
+                <span class="font-bold text-xl">Noor Al-Hadaya</span>
+            </div>
+            <!-- زر التحميل السريع كملف -->
+            <button onclick="downloadSelf()" class="text-[10px] bg-white/5 px-3 py-1.5 rounded-full font-bold opacity-50 hover:opacity-100">تنزيل كملف</button>
+        </header>
+
+        <main class="p-6 space-y-12">
+            <!-- الورد والسبحة -->
+            <section class="bg-slate-900/40 p-10 rounded-[50px] border border-white/5 text-center">
+                <div class="btn-tasbih" onclick="handleTasbih()">
+                    <span id="counter" class="text-6xl font-bold">33</span>
+                    <span id="zikrName" class="text-emerald-500 font-bold mt-2">سبحان الله</span>
+                </div>
+                <div class="flex justify-center gap-2 mt-8" id="zikrDots">
+                <div class="w-1.5 h-1.5 rounded-full transition-all duration-300 bg-emerald-500 w-5"></div>
+            
+                <div class="w-1.5 h-1.5 rounded-full transition-all duration-300 bg-white/10"></div>
+            
+                <div class="w-1.5 h-1.5 rounded-full transition-all duration-300 bg-white/10"></div>
+            
+                <div class="w-1.5 h-1.5 rounded-full transition-all duration-300 bg-white/10"></div>
+            </div>
+            </section>
+
+            <!-- فهرس السور -->
+            <section>
+                <h2 class="text-2xl font-bold mb-8 px-2">المصحف الشريف</h2>
+                <div id="surahGrid" class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(1, 'الفاتحة')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">1</span>
+                        <h4 class="quran-font text-2xl">الفاتحة</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(2, 'البقرة')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">2</span>
+                        <h4 class="quran-font text-2xl">البقرة</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(3, 'آل عمران')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">3</span>
+                        <h4 class="quran-font text-2xl">آل عمران</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(4, 'النساء')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">4</span>
+                        <h4 class="quran-font text-2xl">النساء</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(5, 'المائدة')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">5</span>
+                        <h4 class="quran-font text-2xl">المائدة</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(6, 'الأنعام')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">6</span>
+                        <h4 class="quran-font text-2xl">الأنعام</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(7, 'الأعراف')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">7</span>
+                        <h4 class="quran-font text-2xl">الأعراف</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(8, 'الأنفال')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">8</span>
+                        <h4 class="quran-font text-2xl">الأنفال</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(9, 'التوبة')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">9</span>
+                        <h4 class="quran-font text-2xl">التوبة</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(10, 'يونس')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">10</span>
+                        <h4 class="quran-font text-2xl">يونس</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(11, 'هود')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">11</span>
+                        <h4 class="quran-font text-2xl">هود</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(12, 'يوسف')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">12</span>
+                        <h4 class="quran-font text-2xl">يوسف</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(13, 'الرعد')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">13</span>
+                        <h4 class="quran-font text-2xl">الرعد</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(14, 'إبراهيم')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">14</span>
+                        <h4 class="quran-font text-2xl">إبراهيم</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(15, 'الحجر')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">15</span>
+                        <h4 class="quran-font text-2xl">الحجر</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(16, 'النحل')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">16</span>
+                        <h4 class="quran-font text-2xl">النحل</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(17, 'الإسراء')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">17</span>
+                        <h4 class="quran-font text-2xl">الإسراء</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(18, 'الكهف')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">18</span>
+                        <h4 class="quran-font text-2xl">الكهف</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(19, 'مريم')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">19</span>
+                        <h4 class="quran-font text-2xl">مريم</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(20, 'طه')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">20</span>
+                        <h4 class="quran-font text-2xl">طه</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(21, 'الأنبياء')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">21</span>
+                        <h4 class="quran-font text-2xl">الأنبياء</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(22, 'الحج')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">22</span>
+                        <h4 class="quran-font text-2xl">الحج</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(23, 'المؤمنون')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">23</span>
+                        <h4 class="quran-font text-2xl">المؤمنون</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(24, 'النور')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">24</span>
+                        <h4 class="quran-font text-2xl">النور</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(25, 'الفرقان')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">25</span>
+                        <h4 class="quran-font text-2xl">الفرقان</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(26, 'الشعراء')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">26</span>
+                        <h4 class="quran-font text-2xl">الشعراء</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(27, 'النمل')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">27</span>
+                        <h4 class="quran-font text-2xl">النمل</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(28, 'القصص')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">28</span>
+                        <h4 class="quran-font text-2xl">القصص</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(29, 'العنكبوت')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">29</span>
+                        <h4 class="quran-font text-2xl">العنكبوت</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(30, 'الروم')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">30</span>
+                        <h4 class="quran-font text-2xl">الروم</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(31, 'لقمان')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">31</span>
+                        <h4 class="quran-font text-2xl">لقمان</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(32, 'السجدة')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">32</span>
+                        <h4 class="quran-font text-2xl">السجدة</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(33, 'الأحزاب')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">33</span>
+                        <h4 class="quran-font text-2xl">الأحزاب</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(34, 'سبأ')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">34</span>
+                        <h4 class="quran-font text-2xl">سبأ</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(35, 'فاطر')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">35</span>
+                        <h4 class="quran-font text-2xl">فاطر</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(36, 'يس')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">36</span>
+                        <h4 class="quran-font text-2xl">يس</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(37, 'الصافات')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">37</span>
+                        <h4 class="quran-font text-2xl">الصافات</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(38, 'ص')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">38</span>
+                        <h4 class="quran-font text-2xl">ص</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(39, 'الزمر')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">39</span>
+                        <h4 class="quran-font text-2xl">الزمر</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(40, 'غافر')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">40</span>
+                        <h4 class="quran-font text-2xl">غافر</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(41, 'فصلت')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">41</span>
+                        <h4 class="quran-font text-2xl">فصلت</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(42, 'الشورى')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">42</span>
+                        <h4 class="quran-font text-2xl">الشورى</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(43, 'الزخرف')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">43</span>
+                        <h4 class="quran-font text-2xl">الزخرف</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(44, 'الدخان')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">44</span>
+                        <h4 class="quran-font text-2xl">الدخان</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(45, 'الجاثية')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">45</span>
+                        <h4 class="quran-font text-2xl">الجاثية</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(46, 'الأحقاف')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">46</span>
+                        <h4 class="quran-font text-2xl">الأحقاف</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(47, 'محمد')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">47</span>
+                        <h4 class="quran-font text-2xl">محمد</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(48, 'الفتح')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">48</span>
+                        <h4 class="quran-font text-2xl">الفتح</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(49, 'الحجرات')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">49</span>
+                        <h4 class="quran-font text-2xl">الحجرات</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(50, 'ق')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">50</span>
+                        <h4 class="quran-font text-2xl">ق</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(51, 'الذاريات')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">51</span>
+                        <h4 class="quran-font text-2xl">الذاريات</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(52, 'الطور')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">52</span>
+                        <h4 class="quran-font text-2xl">الطور</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(53, 'النجم')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">53</span>
+                        <h4 class="quran-font text-2xl">النجم</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(54, 'القمر')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">54</span>
+                        <h4 class="quran-font text-2xl">القمر</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(55, 'الرحمن')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">55</span>
+                        <h4 class="quran-font text-2xl">الرحمن</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(56, 'الواقعة')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">56</span>
+                        <h4 class="quran-font text-2xl">الواقعة</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(57, 'الحديد')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">57</span>
+                        <h4 class="quran-font text-2xl">الحديد</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(58, 'المجادلة')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">58</span>
+                        <h4 class="quran-font text-2xl">المجادلة</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(59, 'الحشر')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">59</span>
+                        <h4 class="quran-font text-2xl">الحشر</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(60, 'الممتحنة')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">60</span>
+                        <h4 class="quran-font text-2xl">الممتحنة</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(61, 'الصف')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">61</span>
+                        <h4 class="quran-font text-2xl">الصف</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(62, 'الجمعة')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">62</span>
+                        <h4 class="quran-font text-2xl">الجمعة</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(63, 'المنافقون')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">63</span>
+                        <h4 class="quran-font text-2xl">المنافقون</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(64, 'التغابن')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">64</span>
+                        <h4 class="quran-font text-2xl">التغابن</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(65, 'الطلاق')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">65</span>
+                        <h4 class="quran-font text-2xl">الطلاق</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(66, 'التحريم')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">66</span>
+                        <h4 class="quran-font text-2xl">التحريم</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(67, 'الملك')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">67</span>
+                        <h4 class="quran-font text-2xl">الملك</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(68, 'القلم')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">68</span>
+                        <h4 class="quran-font text-2xl">القلم</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(69, 'الحاقة')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">69</span>
+                        <h4 class="quran-font text-2xl">الحاقة</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(70, 'المعارج')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">70</span>
+                        <h4 class="quran-font text-2xl">المعارج</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(71, 'نوح')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">71</span>
+                        <h4 class="quran-font text-2xl">نوح</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(72, 'الجن')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">72</span>
+                        <h4 class="quran-font text-2xl">الجن</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(73, 'المزمل')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">73</span>
+                        <h4 class="quran-font text-2xl">المزمل</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(74, 'المدثر')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">74</span>
+                        <h4 class="quran-font text-2xl">المدثر</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(75, 'القيامة')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">75</span>
+                        <h4 class="quran-font text-2xl">القيامة</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(76, 'الإنسان')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">76</span>
+                        <h4 class="quran-font text-2xl">الإنسان</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(77, 'المرسلات')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">77</span>
+                        <h4 class="quran-font text-2xl">المرسلات</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(78, 'النبأ')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">78</span>
+                        <h4 class="quran-font text-2xl">النبأ</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(79, 'النازعات')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">79</span>
+                        <h4 class="quran-font text-2xl">النازعات</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(80, 'عبس')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">80</span>
+                        <h4 class="quran-font text-2xl">عبس</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(81, 'التكوير')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">81</span>
+                        <h4 class="quran-font text-2xl">التكوير</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(82, 'الانفطار')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">82</span>
+                        <h4 class="quran-font text-2xl">الانفطار</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(83, 'المطففين')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">83</span>
+                        <h4 class="quran-font text-2xl">المطففين</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(84, 'الانشقاق')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">84</span>
+                        <h4 class="quran-font text-2xl">الانشقاق</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(85, 'البروج')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">85</span>
+                        <h4 class="quran-font text-2xl">البروج</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(86, 'الطارق')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">86</span>
+                        <h4 class="quran-font text-2xl">الطارق</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(87, 'الأعلى')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">87</span>
+                        <h4 class="quran-font text-2xl">الأعلى</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(88, 'الغاشية')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">88</span>
+                        <h4 class="quran-font text-2xl">الغاشية</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(89, 'الفجر')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">89</span>
+                        <h4 class="quran-font text-2xl">الفجر</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(90, 'البلد')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">90</span>
+                        <h4 class="quran-font text-2xl">البلد</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(91, 'الشمس')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">91</span>
+                        <h4 class="quran-font text-2xl">الشمس</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(92, 'الليل')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">92</span>
+                        <h4 class="quran-font text-2xl">الليل</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(93, 'الضحى')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">93</span>
+                        <h4 class="quran-font text-2xl">الضحى</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(94, 'الشرح')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">94</span>
+                        <h4 class="quran-font text-2xl">الشرح</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(95, 'التين')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">95</span>
+                        <h4 class="quran-font text-2xl">التين</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(96, 'العلق')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">96</span>
+                        <h4 class="quran-font text-2xl">العلق</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(97, 'القدر')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">97</span>
+                        <h4 class="quran-font text-2xl">القدر</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(98, 'البينة')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">98</span>
+                        <h4 class="quran-font text-2xl">البينة</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(99, 'الزلزلة')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">99</span>
+                        <h4 class="quran-font text-2xl">الزلزلة</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(100, 'العاديات')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">100</span>
+                        <h4 class="quran-font text-2xl">العاديات</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(101, 'القارعة')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">101</span>
+                        <h4 class="quran-font text-2xl">القارعة</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(102, 'التكاثر')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">102</span>
+                        <h4 class="quran-font text-2xl">التكاثر</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(103, 'العصر')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">103</span>
+                        <h4 class="quran-font text-2xl">العصر</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(104, 'الهمزة')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">104</span>
+                        <h4 class="quran-font text-2xl">الهمزة</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(105, 'الفيل')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">105</span>
+                        <h4 class="quran-font text-2xl">الفيل</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(106, 'قريش')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">106</span>
+                        <h4 class="quran-font text-2xl">قريش</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(107, 'الماعون')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">107</span>
+                        <h4 class="quran-font text-2xl">الماعون</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(108, 'الكوثر')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">108</span>
+                        <h4 class="quran-font text-2xl">الكوثر</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(109, 'الكافرون')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">109</span>
+                        <h4 class="quran-font text-2xl">الكافرون</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(110, 'النصر')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">110</span>
+                        <h4 class="quran-font text-2xl">النصر</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(111, 'المسد')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">111</span>
+                        <h4 class="quran-font text-2xl">المسد</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(112, 'الإخلاص')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">112</span>
+                        <h4 class="quran-font text-2xl">الإخلاص</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(113, 'الفلق')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">113</span>
+                        <h4 class="quran-font text-2xl">الفلق</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(114, 'الناس')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">114</span>
+                        <h4 class="quran-font text-2xl">الناس</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"></path></svg>
+                </div>
+            </div>
+            </section>
+        </main>
+
+        <footer class="py-20 bg-slate-950 text-center border-t border-white/5">
+            <h3 class="text-4xl font-black mb-8">ZIAD EHAB</h3>
+            <div class="flex justify-center gap-10 mb-12 font-bold">
+                <a href="https://wa.me/201145835840" target="_blank" class="text-emerald-500 hover:scale-110 transition">واتساب</a>
+                <a href="https://instagram.com/_zziikkaa_" target="_blank" class="text-pink-500 hover:scale-110 transition">إنستجرام</a>
+                <a href="https://facebook.com/Ziad.ehab.AbdulMoneim" target="_blank" class="text-blue-500 hover:scale-110 transition">فيسبوك</a>
+            </div>
+            <p class="text-[10px] opacity-20 font-bold tracking-[0.5em]">Noor Al-Hadaya 2026</p>
+        </footer>
+    </div>
+
+    <!-- شاشة القراءة -->
+    <div id="readerView" class="fixed inset-0 bg-slate-950 z-[100] hidden flex flex-col">
+        <div class="p-4 flex justify-between items-center nav-glass">
+            <button onclick="exitReader()" class="px-6 py-2 bg-red-500/10 text-red-500 rounded-full font-bold text-xs">خروج</button>
+            <h3 id="surahLabel" class="quran-font text-3xl text-emerald-400"></h3>
+            <div class="w-12"></div>
+        </div>
+        <div class="flex-1 overflow-y-auto">
+            <div id="quranContent" class="quran-container quran-font">
+                <!-- الآيات منظمة جداً هنا -->
+            </div>
+        </div>
+    </div>
+
+    <!-- التفسير الميسر -->
+    <div id="tafsirPop" class="fixed bottom-[-100%] left-0 w-full bg-slate-900 border-t-2 border-emerald-500 p-10 rounded-t-[40px] transition-all duration-500 z-[200] shadow-2xl">
+        <div class="flex justify-between items-center mb-6">
+            <span class="text-emerald-500 font-bold">تفسير الجلالين</span>
+            <button onclick="closeTafsir()" class="opacity-30">إغلاق</button>
+        </div>
+        <p id="tafsirContent" class="text-2xl leading-relaxed text-slate-200"></p>
+    </div>
+
+    <script>
+        // الأذكار
+        const azkar = [
+            { t: "سبحان الله", g: 33, c: 33 },
+            { t: "الحمد لله", g: 33, c: 33 },
+            { t: "الله أكبر", g: 33, c: 33 },
+            { t: "لا إله إلا الله", g: 100, c: 100 }
+        ];
+        let currentIdx = 0;
+
+        const surahNames = ["الفاتحة","البقرة","آل عمران","النساء","المائدة","الأنعام","الأعراف","الأنفال","التوبة","يونس","هود","يوسف","الرعد","إبراهيم","الحجر","النحل","الإسراء","الكهف","مريم","طه","الأنبياء","الحج","المؤمنون","النور","الفرقان","الشعراء","النمل","القصص","العنكبوت","الروم","لقمان","السجدة","الأحزاب","سبأ","فاطر","يس","الصافات","ص","الزمر","غافر","فصلت","الشورى","الزخرف","الدخان","الجاثية","الأحقاف","محمد","الفتح","الحجرات","ق","الذاريات","الطور","النجم","القمر","الرحمن","الواقعة","الحديد","المجادلة","الحشر","الممتحنة","الصف","الجمعة","المنافقون","التغابن","الطلاق","التحريم","الملك","القلم","الحاقة","المعارج","نوح","الجن","المزمل","المدثر","القيامة","الإنسان","المرسلات","النبأ","النازعات","عبس","التكوير","الانفطار","المطففين","الانشقاق","البروج","الطارق","الأعلى","الغاشية","الفجر","البلد","الشمس","الليل","الضحى","الشرح","التين","العلق","القدر","البينة","الزلزلة","العاديات","القارعة","التكاثر","العصر","الهمزة","الفيل","قريش","الماعون","الكوثر","الكافرون","النصر","المسد","الإخلاص","الفلق","الناس"];
+
+        window.onload = () => {
+            renderSurahList();
+            updateTasbihUI();
+        };
+
+        function renderSurahList() {
+            const grid = document.getElementById('surahGrid');
+            grid.innerHTML = surahNames.map((n, i) => `
+                <div class="p-6 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-95 transition" onclick="readSurah(${i+1}, '${n}')">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs opacity-20 font-bold">${i+1}</span>
+                        <h4 class="quran-font text-2xl">${n}</h4>
+                    </div>
+                    <svg class="w-4 h-4 opacity-10" fill="currentColor" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"/></svg>
+                </div>
+            `).join('');
+        }
+
+        async function readSurah(id, name) {
+            const view = document.getElementById('readerView');
+            const content = document.getElementById('quranContent');
+            document.getElementById('surahLabel').innerText = name;
+            view.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+            content.innerHTML = '<div class="py-20 opacity-20">جاري تنظيم المصحف...</div>';
+            
+            try {
+                const res = await fetch(`https://api.alquran.cloud/v1/surah/${id}/ar.alafasy`);
+                const data = await res.json();
+                content.innerHTML = data.data.ayahs.map(a => `
+                    <span class="ayah-text" onclick="showTafsir(${id}, ${a.numberInSurah})">
+                        ${a.text} <span class="ayah-end">${a.numberInSurah}</span>
+                    </span>
+                `).join(' ');
+            } catch(e) { content.innerHTML = '<div class="p-10 text-red-400 font-bold">عذراً، تحتاج للاتصال بالإنترنت لتحميل السورة لأول مرة.</div>'; }
+        }
+
+        async function showTafsir(sid, aid) {
+            const pop = document.getElementById('tafsirPop');
+            const txt = document.getElementById('tafsirContent');
+            pop.style.bottom = '0';
+            txt.innerText = 'جاري جلب التفسير...';
+            try {
+                const res = await fetch(`https://api.alquran.cloud/v1/ayah/${sid}:${aid}/ar.jalalayn`);
+                const data = await res.json();
+                txt.innerText = data.data.text;
+            } catch(e) { txt.innerText = 'حدث خطأ في الاتصال.'; }
+        }
+
+        function closeTafsir() { document.getElementById('tafsirPop').style.bottom = '-100%'; }
+        function exitReader() { 
+            document.getElementById('readerView').classList.add('hidden'); 
+            document.body.style.overflow = 'auto';
+            closeTafsir();
+        }
+
+        function updateTasbihUI() {
+            const z = azkar[currentIdx];
+            document.getElementById('counter').innerText = z.c;
+            document.getElementById('zikrName').innerText = z.t;
+            document.getElementById('zikrDots').innerHTML = azkar.map((_, i) => `
+                <div class="w-1.5 h-1.5 rounded-full transition-all duration-300 ${i === currentIdx ? 'bg-emerald-500 w-5' : 'bg-white/10'}"></div>
+            `).join('');
+        }
+
+        function handleTasbih() {
+            const z = azkar[currentIdx];
+            if (z.c > 0) {
+                z.c--;
+                if (navigator.vibrate) navigator.vibrate(25);
+                if (z.c === 0) {
+                    if (currentIdx < azkar.length - 1) currentIdx++;
+                    else resetAll();
+                }
+                updateTasbihUI();
+            }
+        }
+
+        function resetAll() {
+            currentIdx = 0;
+            azkar.forEach(a => a.c = a.g);
+            updateTasbihUI();
+        }
+
+        // خاصية تحميل الملف مباشرة
+        function downloadSelf() {
+            const html = document.documentElement.outerHTML;
+            const blob = new Blob([html], { type: 'text/html' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'Noor_Al_Hadaya.html';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }
+    </script>
+
+</body></html>
